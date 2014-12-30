@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div class="vidocont">
+    <video id="really-cool-video" class="video-js vjs-default-skin" controls autoplay="autoplay" preload="auto" width="645"
+           height="397" poster="images/play.jpg" data-setup='{}'>
+        <source src="http://v.bjnews.com.cn/2014-12/xingnl.mp4" type='video/mp4'>
+        <p id="video">
+            <script type="text/javascript" src="flowplayer-3.1.4.js"></script>
+            <a href="http://v.bjnews.com.cn/2014-12/xingnl.mp4" style="display:block;width:645px;height:397px;margin:0px auto;" id="nyplayer"></a>
+            <script>
+                flowplayer("nyplayer", "flowplayer-3.1.5.swf", {
+                    clip: {
+                        autoPlay: false,
+                        autoBuffering: true
+                    }, onLoad: function () {
+                        this.setVolume(30);
+                    }
+                });
+            </script>
+        </p>
+    </video>
+</div>
+</body>
+</html>
